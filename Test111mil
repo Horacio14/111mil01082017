@@ -2,6 +2,7 @@
 
 
 FUNCION GetUser (id:entero):string
+ 
   line code 1
   
   line code 2
@@ -11,7 +12,9 @@ FUNCION GetUser (id:entero):string
   line code 4
   
   line code 5
-
+  
+  line code 6
+  
   line code 7
   
 FIN function
