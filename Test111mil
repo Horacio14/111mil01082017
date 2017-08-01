@@ -12,4 +12,6 @@ FUNCION GetUser (id:entero):string
   
   line code 5
 
+  line code 6
+  
 FIN function
