@@ -1,0 +1,41 @@
+package ejercicioclase030817;
+
+import java.util.Scanner;
+
+
+public class ejercicioclase030817 {
+
+    public static void main(String[] args) {
+      Scanner entradaEscaner = new Scanner (System.in);
+        /* System.out.println("Hola guacho");
+    }
+    
+    Scanner entradaEscaner = new Scanner (System.in);
+    
+    int entrada = Integer.parseInt(entradaEscaner.nextLine());
+    String x = entradaEscaner.nextLine();**/
+     int suma;
+     int cant;
+     int numingr;
+     int control;
+     double prom;
+     
+     suma=0;
+     cant=0;
+     control=0;
+     numingr=0;
+
+     
+    while(numingr>=0&&numingr<=100){
+        System.out.println("Ingrese un numero entre 0 y 100, para terminar ingrese un numero fuera del rango");
+        numingr = Integer.parseInt(entradaEscaner.nextLine());
+        suma=suma+numingr;
+        cant++;
+    }
+    
+    prom=suma/cant;
+    System.out.println("La suma de numeros ingresados es:"+suma);
+    System.out.println("El promedio de valor ingresado es:"+prom);
+    System.out.println("La cantidad de numeros ingresados es de: "+cant+" numeros");
+  }
+}
