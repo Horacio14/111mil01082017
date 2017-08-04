@@ -1,0 +1,40 @@
+package javaapplication2;
+
+import java.util.Scanner;
+
+
+public class JavaApplication2 {
+
+    @SuppressWarnings("empty-statement")
+    public static void main(String[] args) {
+      Scanner entradaEscaner = new Scanner (System.in);
+      
+    //NUMEROS PRIMOS
+    int numingr;
+    int i;
+    int primo;
+    int control;
+    
+    control=1;
+    while(control!=0){
+    System.out.println("Ingrese el numero a analizar");
+    numingr = Integer.parseInt(entradaEscaner.nextLine());
+    
+    int contprim=0;
+    for(i=1;i<numingr+1;i++){
+        primo = numingr%i;
+        if(primo==0){
+            contprim++;
+        }
+    }
+    if(contprim>2){
+        System.out.println("El numero ingresado no es un numero primo");
+    }else{
+        System.out.println("El numero ingresado es un numero primo");
+    
+    }
+    System.out.println("Para finalizar ingrese 0, para continuar un numero cualquiera");
+    control = Integer.parseInt(entradaEscaner.nextLine());
+    }
+  }
+}
