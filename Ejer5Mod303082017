@@ -1,0 +1,37 @@
+
+package ejer5mod3030817;
+
+import java.util.Scanner;
+
+
+public class Ejer5Mod3030817 {
+
+    @SuppressWarnings("empty-statement")
+    public static void main(String[] args) {
+     Scanner entradaEscaner = new Scanner (System.in); 
+   
+        int cantdig;
+        int suma;
+        int cont;
+        int digito;
+        
+        cantdig=0;
+        cont=1;
+        suma=0;
+        
+        while(cont!=0){
+            System.out.println("ingrese el digito a analizar, para finalizar ingrese 0");
+            digito=Integer.parseInt(entradaEscaner.nextLine());
+            suma=suma+digito;
+            cantdig++;
+            if(digito==0){
+                cont=0;
+            }
+        }
+        System.out.println("La cantidad de digitos ingresados es: "+cantdig);
+        System.out.println("La suma de los digitos ingresados es: "+suma);
+    }
+}
+        
+ 
+     
