@@ -26,12 +26,12 @@ public class Ejer5Mod3030817 {
             cantdig++;
             if(digito==0){
                 cont=0;
+                cantdig=0;
             }
         }
         System.out.println("La cantidad de digitos ingresados es: "+cantdig);
         System.out.println("La suma de los digitos ingresados es: "+suma);
     }
 }
-        
  
      
