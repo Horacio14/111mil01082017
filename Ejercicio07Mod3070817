@@ -1,0 +1,119 @@
+package javaapplication2;
+
+import java.util.Scanner;
+
+
+public class JavaApplication2 {
+
+    @SuppressWarnings("empty-statement")
+    public static void main(String[] ar) {
+      Scanner teclado=new Scanner(System.in);
+      	
+        String carr;
+	String sexo;
+	int edad;
+	int contma = 0;
+	int contmb = 0;
+	int contmc = 0;
+	int contfa = 0;
+	int contfb = 0;
+	int contfc = 0;
+	int control = 1;
+        double promedadma = 0;
+        double promedadmb = 0;
+        double promedadmc = 0;
+        double promedadfa = 0;
+        double promedadfb = 0;
+        double promedadfc = 0;
+        int acumma = 0;
+        int acummb = 0;
+        int acummc = 0;
+        int acumfa = 0;
+        int acumfb = 0;
+        int acumfc = 0;
+        
+        
+	
+        while(control!=0){
+            System.out.println("Ingrese sexo masculino M o femenino F");
+            sexo=teclado.next();
+            System.out.println("Ingrese edad");
+            edad = teclado.nextInt();
+            System.out.println("Ingrese carrera a inscribirse: A, B o C");
+            carr = teclado.next();
+            switch(carr){
+		
+                case "a":
+		if("m".equals(sexo)){
+        		contma++;
+                        acumma = acumma + edad;
+		}else{
+			contfa++;
+                        acumfa = acumfa + edad;
+		}
+
+		case "b":
+		if("m".equals(sexo)){
+			contmb++;
+                        acummb = acummb + edad;
+		}else{
+			contfb++;
+                        acumfb = acumfb + edad;
+		}
+
+		case "c":
+		if("m".equals(sexo)){
+			contmc++;
+                        acummc = acummc + edad;
+		}else{
+			contfc++;
+                        acumfc = acumfc + edad;
+		}
+            }
+            
+            System.out.println("Para ingresar otro alumno ingrese 1, para finalizar ingrese 0");
+            control = teclado.nextInt();
+        }
+        
+        if(contma!=0){
+            promedadma = acumma/contma;
+        }
+        if(contmb!=0){
+            promedadmb = acummb/contmb;
+        }
+        if(contmc!=0){
+            promedadmc = acummc/contmc;
+        }
+        if(contfa!=0){
+            promedadfa = acumfa/contfa;
+        }
+        if(contfb!=0){
+            promedadfb = acumfb/contfb;
+        }
+        if(contfc!=0){
+            promedadfc = acumfc/contfc;
+        }
+        
+        if(promedadma<promedadmb && promedadma<promedadmc){
+            System.out.println("La carrera A es la que tiene menor promedio de edad");
+        }
+        if(promedadmb<promedadma && promedadmb<promedadmc){
+            System.out.println("La carrera B es la carrera con menor promedio de edad");
+        }
+        if(promedadmc<promedadma && promedadmc<promedadmb){
+            System.out.println("La carrera C es la carrera con menor promedio de edad");
+        }
+        
+        if (promedadma==0 && promedadmb==0){
+            System.out.println("Solo en la carrera C hay inscriptos, prom de edad:"+promedadmc);
+        }
+        
+        if (promedadma==0 && promedadmc==0){
+            System.out.println("Solo en la carrera b hay inscriptos, prom de edad:"+promedadmb);
+        }
+        
+        if (promedadmb==0 && promedadmc==0){
+            System.out.println("Solo en la carrera A hay inscriptos, prom de edad:"+promedadma);
+        }
+    }
+}
